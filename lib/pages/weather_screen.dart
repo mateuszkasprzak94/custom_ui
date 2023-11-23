@@ -1,11 +1,11 @@
 import 'package:custom_switch_widget/custom_switch_widget.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class WeatherPage extends StatefulWidget {
+  const WeatherPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<WeatherPage> createState() => _WeatherPageState();
 }
 
 final CustomSwitchController _controller = CustomSwitchController();
@@ -14,7 +14,7 @@ void _enable() => _controller.enable();
 
 void _disable() => _controller.disable();
 
-class _MyHomePageState extends State<MyHomePage> {
+class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
