@@ -6,7 +6,8 @@ Custom Flutter UI
 
 2. Bank Page
 
-![bank1](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/1ad28b38-7cac-44f9-a304-72ace8b9aadd)
+![bank1](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/3c8e7edd-8771-4f54-b789-3c4a707bcf0e)
+
 
 3. Bank Page
 
