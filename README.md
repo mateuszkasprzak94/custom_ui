@@ -10,4 +10,5 @@ Custom Flutter UI
 
 3. Bank Page
 
-![bank2](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/da6e3f8a-1370-4cce-8127-a10a00db797b)
+![bank2](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/be1cccd6-c7bf-41df-a9c6-9b94ecd93ec4)
+
