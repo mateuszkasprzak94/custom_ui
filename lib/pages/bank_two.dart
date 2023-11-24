@@ -57,9 +57,96 @@ class _BankTwoState extends State<BankTwo> {
                   ),
                 ),
                 const FirstWidget(),
+                const SizedBox(height: 15),
+                const SecondWidget(icon: Icons.book, feature: 'Get receipt'),
+                const SecondWidget(icon: Icons.mail, feature: 'Send by email'),
+                const SecondWidget(
+                    icon: Icons.money, feature: 'Regular payment'),
+                const SizedBox(height: 50),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.arrow_left,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Back',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    )
+                  ],
+                )
               ],
             ),
           )),
+    );
+  }
+}
+
+class SecondWidget extends StatelessWidget {
+  const SecondWidget({
+    required this.icon,
+    required this.feature,
+    super.key,
+  });
+
+  final IconData icon;
+  final String feature;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          horizontal: 25,
+          vertical: 10,
+        ),
+        width: double.infinity,
+        height: 80,
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.25),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(25),
+          ),
+        ),
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.2),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(25),
+                  ),
+                ),
+                child: Icon(
+                  icon,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Text(
+                feature,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20),
+              ),
+            ),
+            const SizedBox(width: 10),
+            const Icon(
+              Icons.arrow_right,
+              color: Colors.white,
+              size: 40,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
