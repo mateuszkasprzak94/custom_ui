@@ -56,45 +56,148 @@ class _BankTwoState extends State<BankTwo> {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.symmetric(
-                        horizontal: 25,
-                        vertical: 10,
-                      ) +
-                      const EdgeInsets.only(top: 16),
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(32),
-                    ),
-                    gradient: const LinearGradient(
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                      colors: <Color>[
-                        Color(0xFFef9f00),
-                        Color(0xFFe18586),
-                        Color(0xFFdd6fc5),
-                        Color(0xFFd775ee),
-                        Color(0xFFdc9ffe),
-                      ],
-                      tileMode: TileMode.mirror,
-                    ),
-                    color: Colors.red,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: const Offset(4, 8),
-                      ),
-                    ],
-                  ),
-                  child: const Column(),
-                ),
+                const FirstWidget(),
               ],
             ),
           )),
+    );
+  }
+}
+
+class FirstWidget extends StatelessWidget {
+  const FirstWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(
+            horizontal: 25,
+            vertical: 10,
+          ) +
+          const EdgeInsets.only(top: 16),
+      width: double.infinity,
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(
+          Radius.circular(32),
+        ),
+        gradient: const LinearGradient(
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: <Color>[
+            Color(0xFFef9f00),
+            Color(0xFFe18586),
+            Color(0xFFdd6fc5),
+            Color(0xFFd775ee),
+            Color(0xFFdc9ffe),
+          ],
+          tileMode: TileMode.mirror,
+        ),
+        color: Colors.red,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: const Offset(4, 8),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10, top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'SEND',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                    ),
+                    const Text(
+                      '\$940.00',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      'Your balance: \$20,495.0',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.6),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+          const SizedBox(height: 20),
+          const Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text(
+                  'TO',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+          const SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Row(
+              children: [
+                const SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: CircleAvatar(
+                    foregroundImage: NetworkImage(
+                        'https://fwcdn.pl/fcp/22/42/662242/12561.1.jpg'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Bilbo Baggins',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.apple,
+                            color: Colors.white.withOpacity(0.6),
+                          ),
+                          Text(
+                            'Apple Card',
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.6),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
