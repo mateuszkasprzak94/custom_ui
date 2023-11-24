@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_training/pages/bank.dart';
-import 'package:ui_training/pages/weather_screen.dart';
+import 'package:ui_training/pages/bank_two.dart';
+// import 'package:ui_training/pages/weather_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BankPage(),
+      home: const BankTwo(),
     );
   }
 }

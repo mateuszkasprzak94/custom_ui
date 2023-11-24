@@ -87,26 +87,24 @@ class CustomPayTwo extends StatelessWidget {
           ),
         ],
       ),
-      child: const Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.arrow_upward),
-            SizedBox(width: 5),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('From Peter D.'),
-                Text('Today, 11:12'),
-              ],
-            ),
-            SizedBox(width: 120),
-            Text(
-              '-\$200',
-              style: TextStyle(fontWeight: FontWeight.w600),
-            ),
-          ],
-        ),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(Icons.arrow_upward),
+          SizedBox(width: 5),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('From Peter D.'),
+              Text('Today, 11:12'),
+            ],
+          ),
+          SizedBox(width: 120),
+          Text(
+            '-\$200',
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
+        ],
       ),
     );
   }
@@ -137,26 +135,24 @@ class CustomPayOne extends StatelessWidget {
           ),
         ],
       ),
-      child: const Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.arrow_downward),
-            SizedBox(width: 5),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('From Jordan R.'),
-                Text('Today, 17:10'),
-              ],
-            ),
-            SizedBox(width: 120),
-            Text(
-              '-\$200',
-              style: TextStyle(fontWeight: FontWeight.w600),
-            ),
-          ],
-        ),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(Icons.arrow_downward),
+          SizedBox(width: 5),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('From Jordan R.'),
+              Text('Today, 17:10'),
+            ],
+          ),
+          SizedBox(width: 120),
+          Text(
+            '-\$200',
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
+        ],
       ),
     );
   }
