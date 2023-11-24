@@ -1,16 +1,13 @@
-# ui_training
+Custom Flutter UI
 
-A new Flutter project.
+1. Weather
 
-## Getting Started
+![weather](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/8f2f5a80-afa7-4e2e-aaa7-bcffa8ded979)
 
-This project is a starting point for a Flutter application.
+2. Bank Page
 
-A few resources to get you started if this is your first Flutter project:
+![bank1](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/1ad28b38-7cac-44f9-a304-72ace8b9aadd)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Bank Page
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![bank2](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/da6e3f8a-1370-4cce-8127-a10a00db797b)
