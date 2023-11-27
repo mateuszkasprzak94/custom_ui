@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_training/pages/bank.dart';
+import 'package:ui_training/pages/task_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BankPage(),
+      home: const TaskManager(),
     );
   }
 }
