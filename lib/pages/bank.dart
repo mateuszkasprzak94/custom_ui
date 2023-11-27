@@ -95,13 +95,13 @@ class CustomPayTwo extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('From Peter D.'),
+              Text('To Peter D.'),
               Text('Today, 11:12'),
             ],
           ),
           SizedBox(width: 120),
           Text(
-            '-\$200',
+            '-\$400',
             style: TextStyle(fontWeight: FontWeight.w600),
           ),
         ],
