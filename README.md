@@ -13,4 +13,7 @@ Custom Flutter UI
 
 ![bank2](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/d15bc1f1-67c5-4c14-b95b-6fe84ea83b1f)
 
+4. Task Manager
+
+![task](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/97b71a4b-d518-4b92-bb24-3e3e6cea2a7b)
 
