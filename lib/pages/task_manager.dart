@@ -8,6 +8,8 @@ class TaskManager extends StatefulWidget {
   State<TaskManager> createState() => _TaskManagerState();
 }
 
+int currentIndex = 0;
+
 class _TaskManagerState extends State<TaskManager> {
   @override
   Widget build(BuildContext context) {
@@ -35,9 +37,228 @@ class _TaskManagerState extends State<TaskManager> {
               WelcomeMessage(),
               // Container
               TaskWidget(),
+              SizedBox(height: 10),
+              MonthlyReview(),
+              TaskReview(),
             ],
           ),
         ),
+      ),
+      extendBody: true,
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        onTap: (newIndex) {
+          setState(() {
+            currentIndex = newIndex;
+          });
+        },
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.blue,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.task),
+            label: 'Review',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notification_important),
+            label: 'Notification',
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class TaskReview extends StatelessWidget {
+  const TaskReview({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                width: 150,
+                height: 140,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 92, 90, 235),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      '22',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Done',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.58),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                width: 150,
+                height: 100,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 92, 90, 235),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      '10',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Ongoing',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.58),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                width: 150,
+                height: 100,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 92, 90, 235),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      '7',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'In progress',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.58),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                width: 150,
+                height: 140,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 92, 90, 235),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      '22',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Waiting for Review',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.58),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MonthlyReview extends StatelessWidget {
+  const MonthlyReview({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 40,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            'Monthly Review',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w400),
+          ),
+          Container(
+            width: 40,
+            height: 40,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Color(0xff22D1FF),
+            ),
+            child: const Icon(
+              Icons.calendar_month,
+              color: Colors.white,
+            ),
+          )
+        ],
       ),
     );
   }
@@ -155,7 +376,7 @@ class WelcomeMessage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 30,
-        vertical: 15,
+        vertical: 10,
       ),
       child: Row(
         children: [
