@@ -17,3 +17,6 @@ Custom Flutter UI
 
 ![task](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/97b71a4b-d518-4b92-bb24-3e3e6cea2a7b)
 
+5. Step Tracker
+
+![step_tracker](https://github.com/mateuszkasprzak94/ui_training/assets/142491717/813d9c4b-53f6-403b-a5ee-4a8d581ebfd4)
